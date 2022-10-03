@@ -2,7 +2,6 @@ import 'package:eat/screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 import '../data/data.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
