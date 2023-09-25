@@ -1,4 +1,6 @@
 import 'package:eat/screens/cart_screen.dart';
+import 'package:eat/widgets/recent_orders.dart';
+import 'package:eat/widgets/resturants.dart';
 import 'package:flutter/material.dart';
 import '../data/data.dart';
 
@@ -34,7 +36,30 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      body: Container(),
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: TextField(
+              decoration: InputDecoration(
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                prefixIcon: IconButton(
+                    onPressed: () {}, icon: const Icon(Icons.search)),
+                hintText: 'Search for food here!',
+                suffixIcon:
+                    IconButton(onPressed: () {}, icon: const Icon(Icons.close)),
+              ),
+            ),
+          ),
+
+          /// Recent Orders Widget
+          const RecentOrders(),
+
+          // Resturants 
+          Resturants()
+        ],
+      ),
     );
   }
 }
